@@ -2,10 +2,8 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 
-const App = () => (
+export const App = () => (
   <div className="App">
-    <h1>Russian Flash Cards App</h1>
+    <h1>Russian Flash Cards</h1>
   </div>
 )
-
-export default hot(module)(App)
