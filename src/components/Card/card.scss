@@ -1,0 +1,45 @@
+@import '../../assets/variables.scss';
+
+.Card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+
+  &:hover .inner {
+    transform: rotateY(180deg);
+  }
+
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .front {
+    background-color: lighten($cyan, 20%);
+  }
+
+  .back {
+    background-color: lighten($teal, 35%);
+    transform: rotateY(180deg);
+  }
+
+  .text {
+    font-size: 2rem;
+    color: $blue;
+  }
+}
